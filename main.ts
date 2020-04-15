@@ -32,7 +32,7 @@ namespace test_music {
     //% block="rest | %tbeat=device_beat | beat"
     //% tbeat.shadow="timePicker"
     export function rest(tbeat: BeatFraction): void {
-        music.ringtone(music.beat(tbeat))
+        music.rest(music.beat(tbeat))
     }
     
     
