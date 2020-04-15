@@ -16,8 +16,18 @@ namespace test_music {
     //% blockId=playtone 
     //% block="playtone | %value=device_note | for | %tbeat=device_beat | beat"
     //% tbeat.shadow="timePicker"
-    
     export function playtone(value: Note, tbeat: BeatFraction): void {
         music.playTone(value, music.beat(tbeat))
-    }		
+    }
+
+ 
+    //% weight=20
+    //% blockId=ringtone 
+    //% block="ringtone | %value=device_note"
+    //% tbeat.shadow="timePicker"
+    export function ringtone(frequency: value): void {
+        music.ringtone(value)
+    }
+    
+    
 }
