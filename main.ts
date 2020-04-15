@@ -28,7 +28,7 @@ namespace test_music {
         music.ringTone(value)
     }
  
-     //% weight=20
+    //% weight=20
     //% blockId=rest 
     //% block="rest | %tbeat=device_beat | beat"
     //% tbeat.shadow="timePicker"
