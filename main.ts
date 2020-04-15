@@ -27,5 +27,13 @@ namespace test_music {
     export function ringtone(value: Note): void {
         music.ringTone(value)
     }
+ 
+     //% weight=20
+    //% blockId=rest 
+    //% block="rest | %tbeat=device_beat | beat"
+    //% tbeat.shadow="timePicker"
+    export function rest(tbeat: BeatFraction): void {
+        music.rest(music.beat(tbeat))
+    }
       
 }
