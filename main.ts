@@ -23,6 +23,7 @@ namespace test_music {
     //% weight=20
     //% blockId=ringtone 
     //% block="ringtone | %value=device_note"
+    //% tbeat.shadow="timePicker"
     export function ringtone(value: Note): void {
         music.ringTone(value)
     }
