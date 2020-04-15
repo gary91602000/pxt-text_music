@@ -29,11 +29,10 @@ namespace test_music {
     
     //% weight=20
     //% blockId=rest 
-    //% block="rest | %tbeat=device_beat | beat"
-    //% tbeat.shadow="timePicker"
-    export function rest(tbeat: BeatFraction): void {
+    //% block="rest | %trest=device_beat | beat"
+    //% trest.shadow="timePicker"
+    export function rest(trest: BeatFraction): void {
         music.rest(music.beat(tbeat))
     }
-    
-    
+      
 }
