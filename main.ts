@@ -24,7 +24,7 @@ namespace test_music {
     //% blockId=ringtone 
     //% block="ringtone | %value=device_note"
     export function ringtone(value: Note): void {
-        music.ringtone(value)
+        music.ringTone(value)
     }
       
 }
