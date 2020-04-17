@@ -14,10 +14,10 @@ namespace test_music {
 
     //% weight=20
     //% blockId=playtone 
-    //% block="playtone | %value=device_note | for | %tbeat=device_beat | beat"
-    //% tbeat.shadow="timePicker"
-    export function playtone(value: Note, tbeat: BeatFraction): void {
-        music.playTone(value, music.beat(tbeat))
+    //% block="playtone | %tfrequency = device_note | for | %tms=device_beat | beat"
+    //% tms.shadow="timePicker"
+    export function playtone(tfrequency: Note, tms: BeatFraction): void {
+        music.playTone(tfrequency, music.beat(tms))
     }
 
     //% weight=20
