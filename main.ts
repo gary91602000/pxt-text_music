@@ -40,7 +40,7 @@ namespace test_music {
     //% blockId=beginmelody
     //% block="start melody | %tmelodyarray | repeating | %toptions"
     //% parts="headphone"
-    export function beginmelody(tmelodyarray: builtInMelody , toptions: MelodyOptions = 1): void {
+    export function beginmelody(tmelodyarray: builtInMelody(melody: Melodies) , toptions: MelodyOptions = 1): void {
         init();
         if (currentMelody != undefined) {
             if (((options & MelodyOptions.OnceInBackground) == 0)
