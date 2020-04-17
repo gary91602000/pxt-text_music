@@ -34,48 +34,5 @@ namespace test_music {
     export function rest(tms: BeatFraction): void {
         music.rest(music.beat(tms))
     }
-     
-
-    //% weight=20
-    //% blockId=beginmelody
-    //% block="start melody | %tmelodyarray | repeating | %toptions"
-    //% parts="headphone"
-    export function beginmelody(tmelodyarray: string[] , toptions: MelodyOptions = 1): void {
-        init();
-        if (currentMelody != undefined) {
-            if (((options & MelodyOptions.OnceInBackground) == 0)
-                && ((options & MelodyOptions.ForeverInBackground) == 0)
-                && currentMelody.background) {
-                currentBackgroundMelody = currentMelody;
-                currentMelody = null;
-                control.raiseEvent(MICROBIT_MELODY_ID, MusicEvent.BackgroundMelodyPaused);
-            }
-            if (currentMelody)
-                control.raiseEvent(MICROBIT_MELODY_ID, currentMelody.background ? MusicEvent.BackgroundMelodyEnded : MusicEvent.MelodyEnded);
-            currentMelody = new Melody(tmelodyArray, toptions);
-            control.raiseEvent(MICROBIT_MELODY_ID, currentMelody.background ? MusicEvent.BackgroundMelodyStarted : MusicEvent.MelodyStarted);
-        } else {
-            currentMelody = new Melody(tmelodyArray, toptions);
-            control.raiseEvent(MICROBIT_MELODY_ID, currentMelody.background ? MusicEvent.BackgroundMelodyStarted : MusicEvent.MelodyStarted);
-            // Only start the fiber once
-            control.inBackground(() => {
-                while (currentMelody.hasNextNote()) {
-                    playNextNote(currentMelody);
-                    if (!currentMelody.hasNextNote() && currentBackgroundMelody) {
-                        // Swap the background melody back
-                        currentMelody = currentBackgroundMelody;
-                        currentBackgroundMelody = null;
-                        control.raiseEvent(MICROBIT_MELODY_ID, MusicEvent.MelodyEnded);
-                        control.raiseEvent(MICROBIT_MELODY_ID, MusicEvent.BackgroundMelodyResumed);
-                        control.raiseEvent(MICROBIT_MELODY_ID, INTERNAL_MELODY_ENDED);
-                    }
-                }
-                control.raiseEvent(MICROBIT_MELODY_ID, currentMelody.background ? MusicEvent.BackgroundMelodyEnded : MusicEvent.MelodyEnded);
-                if (!currentMelody.background)
-                    control.raiseEvent(MICROBIT_MELODY_ID, INTERNAL_MELODY_ENDED);
-                currentMelody = null;
-            })
-        }
-    }
    
 }
