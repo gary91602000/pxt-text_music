@@ -23,7 +23,6 @@ namespace test_music {
     //% weight=20
     //% blockId=ringtone 
     //% block="ringtone(Hz) | %tfrequency "
-    //% tms.shadow="timePicker"
     export function ringtone(tfrequency: Note): void {
         music.ringTone(tfrequency)
     }
