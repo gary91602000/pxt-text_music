@@ -22,18 +22,18 @@ namespace test_music {
 
     //% weight=20
     //% blockId=ringtone 
-    //% block="ringtone | %tfrequency=device_note"
+    //% block="ringtone(Hz) | %tfrequency "
     //% tms.shadow="timePicker"
     export function ringtone(tfrequency: Note): void {
-        music.ringTone(value)
+        music.ringTone(tfrequency)
     }
  
     //% weight=20
     //% blockId=rest 
-    //% block="rest | %tbeat=device_beat | beat"
-    //% tbeat.shadow="timePicker"
-    export function rest(tbeat: BeatFraction): void {
-        music.rest(music.beat(tbeat))
+    //% block="rest(ms) | %tms | beat"
+    //% tms.shadow="timePicker"
+    export function rest(tms: BeatFraction): void {
+        music.rest(music.beat(tms))
     }
       
 }
