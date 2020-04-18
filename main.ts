@@ -61,7 +61,18 @@ namespace test_music {
         music.stopMelody(MelodyStopOptions.All)
     }
 
-
+    //% weight=20
+    //% blockId=tdevice_note 
+    //% block="%tnote"
+    //% shim=TD_ID
+    //% color="#ffffff" colorSecondary="#ffffff" colorTertiary="#D83B01"
+    //% tnote.fieldEditor="note" 
+    //% tnote.defl="262"
+    //% tnote.fieldOptions.decompileLiterals=true
+    //% useEnumVal=1
+    export function noteFrequency(tnote: Note): number {
+        return tnote;
+    }
 
  
  
