@@ -43,6 +43,13 @@ namespace test_music {
     export function beginmelody(tmelodyarray: Melodies = 0 , toptions: MelodyOptions = 1): void {
         music.beginMelody(music.builtInMelody(tmelodyarray), toptions)
     }
+
  
+    //% weight=20
+    //% blockId=onevent
+    //% block="music on | %tvalue"
+    export function onevent(tvalue: MusicEvent = 1 , handler: () => void ): void {
+        
+    }
  
 }
