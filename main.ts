@@ -87,4 +87,12 @@ namespace test_music {
  
  
  
+    //% weight=20
+    //% blockId=ttempo
+    //% block="tempo (bpm)"
+    export function ttempo(): number {
+        return music.tempo()
+    }
+ 
+ 
 }
