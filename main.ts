@@ -75,5 +75,15 @@ namespace test_music {
     }
 
  
+    //% weight=20
+    //% blockId=tbeat 
+    //% block="%tfraction | beat"
+    //% tfraction.shadow="timePicker"
+    export function tbeat(tfraction : BeatFraction): void {
+        music.beat(tfraction)
+    }
+ 
+ 
+ 
  
 }
