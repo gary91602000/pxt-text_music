@@ -53,4 +53,12 @@ namespace test_music {
         
     }
  
+ 
+    //% weight=20
+    //% blockId=stopmelody 
+    //% block="stop melody | %toptions"
+    export function stopmelody(toptions: MelodyStopOptions): void {
+        music.stopMelody(MelodyStopOptions.All)
+    }
+ 
 }
