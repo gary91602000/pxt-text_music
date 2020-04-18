@@ -41,7 +41,7 @@ namespace test_music {
     //% block="start melody | %tmelodyarray | repeating | %toptions"
     //% tmelodyarray.defl = "Dadadadum"
     //% parts="headphone"
-    export function beginmelody(tmelodyarray: Melodies, toptions: MelodyOptions = 1): void {
+    export function beginmelody(tmelodyarray: Melodies = 0 , toptions: MelodyOptions = 1): void {
         music.beginMelody(music.builtInMelody(tmelodyarray), toptions)
     }
  
