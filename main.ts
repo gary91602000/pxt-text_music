@@ -39,7 +39,6 @@ namespace test_music {
     //% weight=20
     //% blockId=beginmelody
     //% block="start melody | %tmelodyarray | repeating | %toptions"
-    //% tmelodyarray.defl = "Dadadadum"
     //% parts="headphone"
     export function beginmelody(tmelodyarray: Melodies = 0 , toptions: MelodyOptions = 1): void {
         music.beginMelody(music.builtInMelody(tmelodyarray), toptions)
