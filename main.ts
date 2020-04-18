@@ -96,4 +96,14 @@ namespace test_music {
     }
  
  
+    //% weight=20
+    //% blockId=changetempoby 
+    //% block="change tempo by (bpm) | %tbpm "
+    export function changetempoby(tbpm: number): void {
+        music.changeTempoBy(tbpm)
+    }
+ 
+ 
+ 
+ 
 }
