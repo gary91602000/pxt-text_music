@@ -24,7 +24,8 @@ namespace test_music {
     //% weight=20
     //% blockId=ringtone 
     //% block="ringtone | %tfrequency "
-    export function ringtone(tfrequency: Note): void {
+    //% tfrequency.shadow="device_note"
+    export function ringtone(tfrequency: number): void {
         music.ringTone(tfrequency)
     }
  
