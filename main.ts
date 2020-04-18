@@ -73,7 +73,7 @@ namespace test_music {
     //% tnote.fieldOptions.decompileLiterals=true
     //% useEnumVal=1
     export function noteFrequency(tnote: Note): number {
-        return note;
+        return tnote;
     }
 }
  
