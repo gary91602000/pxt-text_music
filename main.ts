@@ -80,7 +80,7 @@ namespace test_music {
     //% block="%tfraction | beat"
     //% tfraction.shadow="timePicker"
     export function tbeat(tfraction : BeatFraction): number {
-        music.beat(tfraction)
+        music.beat(tfraction.Whole)
     }
  
  
