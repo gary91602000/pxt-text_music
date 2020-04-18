@@ -15,7 +15,7 @@ namespace test_music {
     //% weight=20
     //% blockId=playtone 
     //% block="playtone | %tfrequency | for | %tms | beat"
-    //% tfrequency.shadow="tdevice_note"
+    //% tfrequency.shadow="device_note"
     //% tms.shadow="timePicker"
     export function playtone(tfrequency: number, tms: BeatFraction): void {
         music.playTone(tfrequency, music.beat(tms))
@@ -62,20 +62,7 @@ namespace test_music {
     }
 
 
- 
-    //% weight=20
-    //% blockId=tdevice_note 
-    //% block="%tnote"
-    //% shim=TD_ID
-    //% color="#ffffff" colorSecondary="#ffffff" colorTertiary="#D83B01"
-    //% tnote.fieldEditor="note" 
-    //% tnote.defl="262"
-    //% tnote.fieldOptions.decompileLiterals=true
-    //% useEnumVal=1
-    export function noteFrequency(tnote: Note): number {
-        return tnote;
-    }
-}
+
  
  
 }
