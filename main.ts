@@ -95,15 +95,30 @@ namespace test_music {
         return music.tempo()
     }
  
+
+ 
  
     //% weight=20
     //% blockId=changetempoby 
     //% block="change tempo by (bpm) | %tbpm "
+    //% tbpm.defl=20
     export function changetempoby(tbpm: number): void {
         music.changeTempoBy(tbpm)
     }
  
  
+ 
+ 
+    //% weight=20
+    //% blockId=settempo
+    //% block="set tempo to (bpm) | %tbpm "
+    //% tbpm.defl=120
+    export function changetempoby(tbpm: number): void {
+        music.setTempo(tbpm)
+    }
+ 
+ 
+
  
  
 }
