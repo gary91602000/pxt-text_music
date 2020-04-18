@@ -60,5 +60,21 @@ namespace test_music {
     export function stopmelody(toptions: MelodyStopOptions): void {
         music.stopMelody(MelodyStopOptions.All)
     }
+
+ 
+
+    //% blockId=device_note 
+    //% block="%tnote"
+    //% shim=TD_ID
+    //% color="#ffffff" colorSecondary="#ffffff" colorTertiary="#D83B01"
+    //% tnote.fieldEditor="note" 
+    //% tnote.defl="262"
+    //% tnote.fieldOptions.decompileLiterals=true
+    //% useEnumVal=1
+    export function noteFrequency(tnote: Note): number {
+        return note;
+    }
+}
+ 
  
 }
