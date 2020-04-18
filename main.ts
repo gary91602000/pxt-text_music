@@ -15,7 +15,7 @@ namespace test_music {
     //% weight=20
     //% blockId=playtone 
     //% block="playtone | %tfrequency | for | %tms | beat"
-    //% tfrequency.shadow="device_note"
+    //% tfrequency.shadow="tdevice_note"
     //% tms.shadow="timePicker"
     export function playtone(tfrequency: number, tms: BeatFraction): void {
         music.playTone(tfrequency, music.beat(tms))
@@ -64,7 +64,7 @@ namespace test_music {
 
  
     //% weight=20
-    //% blockId=device_note 
+    //% blockId=tdevice_note 
     //% block="%tnote"
     //% shim=TD_ID
     //% color="#ffffff" colorSecondary="#ffffff" colorTertiary="#D83B01"
