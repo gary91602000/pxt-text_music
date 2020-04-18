@@ -107,7 +107,13 @@ namespace test_music {
     }
  
  
- 
+    //% weight=20
+    //% blockId=settempo
+    //% block="set tempo to (bpm) | %tbpm "
+    //% tbpm.defl=120
+    export function settempo(tbpm: number): void {
+        music.setTempo(tbpm)
+    }
  
 
  
