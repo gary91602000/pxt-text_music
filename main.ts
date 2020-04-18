@@ -61,8 +61,9 @@ namespace test_music {
         music.stopMelody(MelodyStopOptions.All)
     }
 
- 
 
+ 
+    //% weight=20
     //% blockId=device_note 
     //% block="%tnote"
     //% shim=TD_ID
